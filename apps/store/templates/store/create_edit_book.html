@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}{{ title }}{% endblock title %}
+
+{% block styles %}
+    {{ block.super }}
+     <link rel="stylesheet" href="{% static "store/css/bootstrap-datepicker3.min.css" %}">
+{% endblock styles %}
+
+{% block content %}
+
+    <h1>{{ title }}</h1>
+    <form method="POST" enctype='multipart/form-data' class="item-form">
+    <div class="form-group">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button class="btn btn-info">Сохранить</button>
+        </div>
+    </form>
+
+
+{% endblock content %}
+
+{% block scripts %}
+    {{ block.super }}
+    <script src="{% static "store/js/bootstrap-datepicker.min.js" %}"></script>
+    <script src="{% static "store/locales/bootstrap-datepicker.uk.min.js" %}"></script>
+    <script>
+        $('#id_publish_date').datepicker({
+            format: "dd.mm.yyyy",
+            todayBtn: true,
+            language: "uk",
+            daysOfWeekHighlighted: "0,6",
+            todayHighlight: true
+        });
+    </script>
+{% endblock scripts %}
