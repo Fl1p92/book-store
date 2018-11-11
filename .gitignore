@@ -1,0 +1,21 @@
+.idea/
+
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+.python-version
+
+# Environment
+.env
+
+# Media dir
+!public/media/
+public/media/*
+!public/media/.gitkeep
+
+# Static dir
+!public/static/
+public/static/*
+!public/static/.gitkeep
