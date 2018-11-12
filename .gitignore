@@ -1,3 +1,4 @@
+# Pycharm IDE
 .idea/
 
 # Byte-compiled / optimized / DLL files
@@ -5,9 +6,10 @@ __pycache__/
 *.py[cod]
 *$py.class
 
+# Pyenv virtualenv version
 .python-version
 
-# Environment
+# Environment variables
 .env
 
 # Media dir
