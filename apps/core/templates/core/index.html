@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block title %}Info logs{% endblock %}
+
+{% block content %}
+    <br>
+    <h1>Logs of books manipulations</h1>
+    {% for logline in logline_list %}
+        <hr>
+        <p>{{ logline.logging_time }} [{{ logline.logging_type }}] -- {{ logline.logging_text }}</p>
+        <hr>
+    {% endfor %}
+
+{% endblock content %}

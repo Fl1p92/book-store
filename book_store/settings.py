@@ -12,7 +12,7 @@ SECRET_KEY = env('BS_SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = env.bool('BS_DEBUG', default=False)
 
-ALLOWED_HOSTS = env.list('TS_ALLOWED_HOSTS', default=[])
+ALLOWED_HOSTS = env.list('BS_ALLOWED_HOSTS', default=[])
 
 
 # Application definition
@@ -27,7 +27,8 @@ INSTALLED_APPS = [
 
     'silk',
 
-    'apps.store',
+    'apps.core.apps.CoreConfig',
+    'apps.store.apps.StoreConfig',
 ]
 
 MIDDLEWARE = [
