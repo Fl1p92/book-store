@@ -17,8 +17,8 @@
     </div>
     <div>
         <a href="{% url "store:create" %}" class="badge badge-primary"> <img src="{% static "store/images/plus.svg" %}"> Add new book</a>
-        <a href="{% url "silk:requests" %}?show=10&order_dir=DESC" class="badge badge-success">Last 10 http requests</a>
-        <a href="{% url "core:index" %}" class="badge badge-info">Logs of books manipulations</a>
+        <a href="{% url "core:requests" %}" class="badge badge-success">Last 10 http requests</a>
+        <a href="{% url "core:logs" %}" class="badge badge-info">Logs of books manipulations</a>
     </div>
     <hr>
     {% for book in book_list %}
