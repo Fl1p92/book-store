@@ -25,8 +25,6 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 
-    'silk',
-
     'apps.core.apps.CoreConfig',
     'apps.store.apps.StoreConfig',
 ]
@@ -39,7 +37,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    'silk.middleware.SilkyMiddleware',  # must be upper than middleware with process_request
+    'apps.core.middleware.SaveRequestMiddleware',
 ]
 
 ROOT_URLCONF = 'book_store.urls'
