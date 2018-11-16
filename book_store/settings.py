@@ -1,7 +1,7 @@
 import environ
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
-BASE_DIR = environ.Path(__file__) - 2 # (book-store/book_store/settings.py - 2 = book-store/)
+BASE_DIR = environ.Path(__file__) - 2  # (book-store/book_store/settings.py - 2 = book-store/)
 
 env = environ.Env()
 environ.Env.read_env(str(BASE_DIR.path('.env')))
@@ -24,6 +24,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+
+    'widget_tweaks',
 
     'apps.core.apps.CoreConfig',
     'apps.store.apps.StoreConfig',
