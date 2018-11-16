@@ -1,12 +1,14 @@
 {% extends "base.html" %}
-{% load static %}
+{% load static widget_tweaks %}
 
 {% block title %}Books store{% endblock %}
 
 {% block content %}
     <div class="sort-buttons">
-        <form class="query-form" method="GET">
-            {{ sorted_by_date_form }}
+        <form class="query-form" method="GET" style="width: 200px;">
+            {% for field in sorted_by_date_form %}
+                <p><label>{{ field.label }}:</label>{% render_field field class="form-control" %}</p>
+            {% endfor %}
         </form>
         <script>
             var form = document.getElementsByClassName("query-form")[0];
